@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>jquery实现多级下拉菜单-柯乐义</title>
+<style>
+/* navigation style */
+#keleyi-com-nav{
+height: 39px;
+font: 12px Geneva, Arial, Helvetica, sans-serif;
+background: #2D2D2D;
+border: 1px solid #323232;
+border-radius: 3px;
+min-width:500px;
+margin-left: 0px;
+padding-left: 0px;
+}
+#keleyi-com-nav li{
+list-style: none;
+display: block;
+float: left;
+height: 40px;
+position: relative;
+border-right: 1px solid #323232;
+}
+#keleyi-com-nav li a{
+padding: 0px 10px 0px 30px;
+margin: 0px 0;
+line-height: 40px;
+text-decoration: none;
+border-right: 1px solid #636161;
+height: 40px;
+color: #FFF;
+text-shadow: 1px 1px 1px #66696B;
+}
+#keleyi-com-nav ul{
+background: #f2f5f6;
+padding: 0px;
+border-bottom: 1px solid #DDDDDD;
+border-right: 1px solid #DDDDDD;
+border-left:1px solid #DDDDDD;
+border-radius: 0px 0px 3px 3px;
+box-shadow: 2px 2px 3px #ECECEC;
+-webkit-box-shadow: 2px 2px 3px #ECECEC;
+-moz-box-shadow:2px 2px 3px #ECECEC;
+width:170px;
+}
+#keleyi-com-nav .site-name,#keleyi-com-nav .site-name:hover{
+padding-left: 10px;
+padding-right: 10px;
+color: #FFF;
+background: url(http://keleyi.com/keleyi/phtml/jqmenu/4/logo.png) no-repeat 10px 5px;
+width: 160px;
+}
+#keleyi-com-nav .site-name a{
+width: 129px;
+overflow:hidden;
+}
+#keleyi-com-nav li.facebook{
+background: url(http://keleyi.com/keleyi/phtml/jqmenu/4/facebook.png) no-repeat 9px 12px;
+}
+#keleyi-com-nav li.facebook:hover {
+background: url(http://keleyi.com/keleyi/phtml/jqmenu/4/facebook.png) no-repeat 9px 12px #010101;
+}
+#keleyi-com-nav li.yahoo{
+background: url(http://keleyi.com/keleyi/phtml/jqmenu/4/yahoo.png) no-repeat 9px 12px;
+}
+#keleyi-com-nav li.yahoo:hover {
+background: url(http://keleyi.com/keleyi/phtml/jqmenu/4/yahoo.png) no-repeat 9px 12px #010101;
+}
+
+#keleyi-com-nav li:hover{
+background: #010101;
+}
+#keleyi-com-nav li a{
+display: block;
+}
+#keleyi-com-nav ul li {
+border-right:none;
+border-bottom:1px solid #DDDDDD;
+width:170px;
+height:39px;
+}
+#keleyi-com-nav ul li a {
+border-right: none;
+color:#6791AD;
+text-shadow: 1px 1px 1px #FFF;
+border-bottom:1px solid #FFFFFF;
+}
+#keleyi-com-nav ul li:hover{background:#DFEEF0;}
+#keleyi-com-nav ul li:last-child { border-bottom: none;}
+#keleyi-com-nav ul li:last-child a{ border-bottom: none;}
+/* Sub menus */
+#keleyi-com-nav ul{
+display: none;
+visibility:hidden;
+position: absolute;
+top: 40px;
+}
+/* Third-level menus */
+#keleyi-com-nav ul ul{
+top: 0px;
+left:170px;
+display: none;
+visibility:hidden;
+border: 1px solid #DDDDDD;
+}
+/* Fourth-level menus */
+#keleyi-com-nav ul ul ul{
+top: 0px;
+left:170px;
+display: none;
+visibility:hidden;
+border: 1px solid #DDDDDD;
+}
+#keleyi-com-nav ul li{
+display: block;
+visibility:visible;
+}
+#keleyi-com-nav li:hover > ul{
+display: block;
+visibility:visible;
+}
+</style>
+<!--[if IE 7]>
+<style>
+#keleyi-com-nav{
+margin-left:0px
+}
+#keleyi-com-nav ul{
+left:-40px;
+}
+#keleyi-com-nav ul ul{
+left:130px;
+}
+#keleyi-com-nav ul ul ul{
+left:130px;
+}
+</style>
+<![endif]-->
+<script type="text/javascript" src="http://keleyi.com/keleyi/pmedia/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+$("#kel"+"eyi-com-nav li").hover(
+function () {
+$(this).children('ul').hide();
+$(this).children('ul').slideDown('fast');
+},
+function () {
+$('ul', this).slideUp('fast');
+});
+});
+</script>
+</head>
+<body>
+<ul id="keleyi-com-nav">
+<li class="site-name"><a href="http://keleyi.com"> </a></li>
+<li class="yahoo"><a href="http://keleyi.com">导航菜单</a>
+<ul>
+<li><a href="http://keleyi.com/a/bjac/veugsmw9.htm">导航菜单二级分类 »</a>
+<ul>
+<li><a href="http://keleyi.com">1</a></li>
+<li><a href="http://keleyi.com/a/bjac/r55i6646.htm">2</a></li>
+<li><a href="http://keleyi.com">3</a></li>
+<li><a href="http://keleyi.com">导航菜单三 »</a>
+<ul>
+<li><a href="http://keleyi.com">导航菜单4</a></li>
+<li><a href="http://keleyi.com/a/bjac/c6gu08gm.htm">1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="http://keleyi.com">1</a></li>
+<li><a href="http://keleyi.com">2</a></li>
+</ul>
+</li>
+<li class="facebook"><a href="http://keleyi.com">翻页</a>
+<ul>
+<li><a href="http://keleyi.com">1</a></li>
+<li><a href="http://keleyi.com">2</a></li>
+</ul>
+</li>
+</ul>
+</body>
+</html>
