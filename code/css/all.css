@@ -1,0 +1,48 @@
+@charset "gb2312";
+/* CSS  Document */
+
+body, div, address, blockquote, iframe, ul, ol, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, table, caption, th, td, form, legend, fieldset {
+    font: 12px/1.6 "Segoe UI",Tahoma,Arial;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+}
+ol, ul {
+    list-style: none outside none;
+}
+img, iframe, fieldset {
+    border: 0 none;
+}
+:focus {
+    outline: 0 none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+caption, th {
+    text-align: left;
+}
+
+
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+}
+textarea {
+    overflow: auto;
+}
+a:link, a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+a.hidefocus  { outline: none; } 
+button.hidefocus::-moz-focus-inner {  border:none; }  
+
+.clear{ clear:both}
+
+
+.all_wrap{ width:980px; margin:0 auto;padding:0; z-index:5}
