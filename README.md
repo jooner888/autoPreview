@@ -4,13 +4,13 @@
 
 # 目录
 
-index.html
-   upload/
-   js/
-      +jquery-1.8.2.min.js
-      +jquery.imagePreview.js
-   css/
-      +all.css
+index.html<br>
+   upload/<br><br>
+   js/<br>
+      +jquery-1.8.2.min.js<br>
+      +jquery.imagePreview.js<br>
+   css/<br>
+      +all.css<br>
       
 # 使用方法
 
