@@ -5,7 +5,8 @@
 # 目录
 
 index.html<br>
-upload/<br><br>
+upload/<br>
+图片文件<br>
 js/<br>
 &nbsp;&nbsp;jquery-1.8.2.min.js<br>
 &nbsp;&nbsp;jquery.imagePreview.js<br>
